@@ -28,12 +28,6 @@ For mobile platforms (GearVR and Cardboard) Teleport Spots with a Gaze cursor ar
 - [Blender](https://www.blender.org/)
 - [Meshlab](http://www.meshlab.net/)
 
-# Various Models are from
-
-- [Archive3D](http://archive3d.net/)
-- [Nefertiti](http://nefertitihack.alloversky.com/)
-- [Female with a Helmet](https://sketchfab.com/models/c80c8fd27ebf4762a781ac298667fa48)
-
 # Audio is from
 
 - [freesound.org](https://www.freesound.org/)
@@ -42,11 +36,3 @@ For mobile platforms (GearVR and Cardboard) Teleport Spots with a Gaze cursor ar
 
 - [wikipedia.org](https://www.wikipedia.org/)
 
-# More images
-
-![hallvr2](/screenshots/thehall2.jpg)
-![hallvr3](/screenshots/thehall3.jpg)
-![hallvr4](/screenshots/thehall4.jpg)
-![hallvr5](/screenshots/thehall5.jpg)
-
-[Live Demo](https://cecropia.github.io/thehallaframe/)
