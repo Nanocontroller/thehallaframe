@@ -7,7 +7,6 @@
     <script src="https://unpkg.com/aframe-cursor-teleport-component@1.0.0/dist/aframe-cursor-teleport-component.min.js"></script>
     <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
 
-
     <script src="js/aframe-extras.min.js"></script>
 
     
@@ -58,21 +57,14 @@
       <a-cylinder position="-8.5 0.75 0" radius="0.5" height=".75" color="#FFC65D"></a-cylinder>
 
       <!-- camera rig -->
-      <!-- camera rig -->
-      <a-entity id="cameraRig" cursor-teleport="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision; ignoreEntities: .clickable">
+      <!--<a-entity id="cameraRig" cursor-teleport="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision">
         <a-entity id="head" position="0 1.6 0" camera look-controls="reverseMouseDrag: true"></a-entity>
-        <a-entity laser-controls="hand: left" raycaster="objects: .clickable; far: 100" line="color: red; opacity: 0.75" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+        <a-entity laser-controls="hand: left" raycaster="objects: .clickable; far: 60" line="color: red; opacity: 0.75" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
         <a-entity laser-controls="hand: right" raycaster="objects: .clickable" line="color: red; opacity: 0.75" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
-      </a-entity>
+      </a-entity>-->
 
       <!-- collidable entity -->
       <a-entity class="collision" position="0 -.1 0" geometry="primitive: box; width: 16; height: .1; depth: 16" material="color: #ffcc80"></a-entity>
-  
-     
-
-      <!-- UI element -->
-      <a-entity class="clickable" color-change geometry="primitive: octahedron" scale=".2 .2 .2" position="0 1 -8"></a-entity>
-
     </a-scene>
   </body>
 </html>
