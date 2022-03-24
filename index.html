@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>VR exhibit in A-Frame</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="js/aframe-teleport-controls.min.js"></script>
     <script src="js/mobile_component.js"></script>
   </head>
   <body>
@@ -34,12 +35,21 @@
         <!-- this piece is only meant for teleportation -->
         <a-asset-item id="hall_low_floor-obj" src="models/hall_low_floor.obj"></a-asset-item>
         <!-- - hall low floor-->
+        <!-- floor -->
+        <a-asset-item id="floor-obj" src="models/floor.obj"></a-asset-item>
+        <img id="floor-texture" src="textures/floor.jpg">
+        <img id="floor_normal-texture" src="textures/floor_normal.jpg">
+        <!-- - floor -->
 
       </a-assets>
 
       <a-entity light="type: directional; color: #FFF; intensity: 0.5" position="2 20 0"></a-entity>
       <a-entity light="type: ambient; color: #FFF"></a-entity>
+
+      <a-entity gltf-model="#museumModel"></a-entity>
       <a-entity obj-model="obj: #hall_low_floor-obj;" material="opacity: 0.0" id="hall_low_floor"></a-entity>
+      <a-entity obj-model="obj: #floor-obj;" material="src: #floor-texture; normalMap: #floor_normal-texture; metalness: 0.6" id="floor"></a-entity>
+     
 
       <a-sky color="#EEEEFF" material="src: #sky_sphere-texture"></a-sky>
 
@@ -47,12 +57,7 @@
       <a-sphere position="-3 1.25 -8" radius="1" color="#EF2D5E"></a-sphere>
       <a-cylinder position="3 0.75 -5" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       
-      <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-       
-      
-      -->
-      <a-entity gltf-model="#museumModel"></a-entity>
-      
+      <!-- <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>-->
       
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="left"></a-entity>
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="right"></a-entity>
