@@ -29,11 +29,18 @@
                  position="1 1 10"></a-sound>
 
         <a-asset-item id="museumModel" src="models/room.glb"></a-asset-item>
+        
+        <!-- hall low floor -->
+        <!-- this piece is only meant for teleportation -->
+        <a-asset-item id="hall_low_floor-obj" src="models/hall_low_floor.obj"></a-asset-item>
+        <!-- - hall low floor-->
+
       </a-assets>
 
       <a-entity light="type: directional; color: #FFF; intensity: 0.5" position="2 20 0"></a-entity>
       <a-entity light="type: ambient; color: #FFF"></a-entity>
-      
+      <a-entity obj-model="obj: #hall_low_floor-obj;" material="opacity: 0.0" id="hall_low_floor"></a-entity>
+
       <a-sky color="#EEEEFF" material="src: #sky_sphere-texture"></a-sky>
 
       <a-box position="-3 0.5 -6" rotation="0 45 0" color="#4CC3D9"></a-box>
