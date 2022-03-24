@@ -56,18 +56,10 @@
       <a-box position="-3 1 -10" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere position="-3 1.5 -14" radius=".75" color="#EF2D5E"></a-sphere>
       <a-cylinder position="-10 0.75 0" radius="0.5" height=".5" color="#FFC65D"></a-cylinder>
-      <!--         
-        <a-entity id="left-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
-        <a-entity id="right-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity> -->
-
-      <a-entity id="cameraRig">
-        <!-- camera -->
-        <a-entity id="head" camera wasd-controls look-controls></a-entity>
-        <!-- hand controls -->
-        <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="left"></a-entity>
-        <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="right"></a-entity>
-
-      </a-entity>
+     
+      <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="left"></a-entity>
+      <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="right"></a-entity>
+      
     </a-scene>
 
   </body>
