@@ -56,17 +56,16 @@
       <a-cylinder position="-8.5 0.75 0" radius="0.5" height=".75" color="#FFC65D"></a-cylinder>
 
       <!-- camera rig -->
-      <a-entity id="cameraRig" navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision; ignoreEntities: .clickable">
-        <a-entity id="head" position="0 1.52 0" camera look-controls="reverseMouseDrag: true"></a-entity>
-        <a-entity laser-controls="hand: left" raycaster="objects: .clickable; far: 100" line="color: red; opacity: 0.75" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
-        <a-entity laser-controls="hand: right" raycaster="objects: .clickable" line="color: red; opacity: 0.75" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+      <!-- camera rig -->
+      <a-entity id="cameraRig" cursor-teleport="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision">
+        <a-entity id="head" position="0 1.6 0" camera look-controls="reverseMouseDrag: true"></a-entity>
       </a-entity>
 
       <!-- collidable entity -->
-      <a-entity class="collision" position="0 .05 0" geometry="primitive: box; width: 16; height: .1; depth: 16"></a-entity>
+      <a-entity class="collision" position="0 -.05 0" geometry="primitive: box; width: 16; height: .1; depth: 16"></a-entity>
 
       <!-- UI element -->
-      <a-entity class="clickable" color-change geometry="primitive: octahedron" scale=".2 .2 .2" position="-.8 1 -1.5"></a-entity>
+      <a-entity class="clickable" color-change geometry="primitive: octahedron" scale=".2 .2 .2" position="0 1 -8"></a-entity>
 
     </a-scene>
   </body>
