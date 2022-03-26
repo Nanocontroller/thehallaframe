@@ -5,7 +5,8 @@
     <title>VR exhibit in A-Frame</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-cursor-teleport-component@1.0.0/dist/aframe-cursor-teleport-component.min.js"></script>
-    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+    <!--<script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>-->
+    <script src="https://unpkg.com/aframe-teleport-controls@0.3.x/dist/aframe-teleport-controls.min.js"></script>
 
     <script src="js/aframe-extras.min.js"></script>
 
@@ -62,6 +63,9 @@
         <a-entity laser-controls="hand: left" raycaster="objects: .clickable; far: 60" line="color: red; opacity: 0.75" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
         <a-entity laser-controls="hand: right" raycaster="objects: .clickable" line="color: red; opacity: 0.75" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
       </a-entity>-->
+      <a-entity id="cameraRig" cursor-teleport="">
+        <a-entity id="head" position="0 1.6 0" camera look-controls="reverseMouseDrag: true"></a-entity>
+      </a-entity>
 
       <!-- collidable entity -->
       <a-entity class="collision" position="0 -.1 0" geometry="primitive: box; width: 16; height: .1; depth: 16" material="color: #ffcc80"></a-entity>
